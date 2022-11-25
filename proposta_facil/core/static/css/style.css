@@ -1,0 +1,202 @@
+/* CSS reset */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#main{
+    background-color: rgb(255, 255, 255);
+    padding: 10px 10px;
+    box-shadow: 0 6px 8px 0 rgba(102, 102, 102, 0.815), 0 6px 20px 0 rgba(0, 0, 0, 0.47);
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+
+.container {   
+    max-width: 1550px!important;
+    width: 100vw;
+    height: 100vh;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* content que contem os formulï¿½rios */
+.content {
+    width: 350px;
+    margin: 0px auto;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+/* formatando o cabeï¿½alho dos formulï¿½rios */
+h1 {
+    font-size: 48px;
+    /* color: #E39A42; */
+    color: #bebcbc;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+h1:after {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background-color: #E39A42;
+    background: linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%,
+    rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+p:first-child {
+    margin: 0px;
+}
+
+
+/**** advanced input styling ****/
+
+
+/* placeholder */
+::-webkit-input-placeholder {
+    /* color: #bebcbc; */
+    font-style: italic;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #000000;
+    font-style: italic;
+}
+
+
+input:not([type="checkbox"]) {
+    margin-top: 4px;
+    padding: 10px;
+    border: 1px solid #b2b2b2;
+
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+/* Estilo do botão submit */
+
+
+input[type="submit"] {
+    width: 100% !important;
+    cursor: pointer;
+    background: #283142;
+    padding: 8px 5px;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 1px #333;
+
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+}
+
+input[type="submit"]:hover {
+    background: #E39A42;
+}
+
+/* Marcando os links para mudar de um formulário para outro */
+
+.link {
+    position: absolute;
+    background: #7a7a7a;
+    color: #090909;
+    left: 0px;
+    height: 23px;
+    width: 290px;
+    padding: 17px 30px 20px 30px;
+    font-size: 16px;
+    text-align: right;
+    border-top: 1px solid #dbe5e8;
+
+
+}
+
+.link_login {
+    position: absolute;
+    background: #7a7a7a;
+    color: #090909;
+    left: 0px;
+    height: 23px;
+    width: 290px;
+    padding: 17px 30px 20px 30px;
+    font-size: 16px;
+    text-align: right;
+    border-top: 1px solid #dbe5e8;
+
+
+}
+
+.link a {
+    font-weight: bold;
+    background: #E39A42;
+    padding: 6px;
+    color: rgb(0, 2, 147);
+    margin-left: 10px;
+    border: 1px solid #cbd518;
+
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+
+.link_login a {
+    font-weight: bold;
+    background: #E39A42;
+    padding: 6px 35px;
+    color: rgb(0, 2, 147);
+    margin-left: 10px;
+    border: 1px solid #cbd518;
+
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+
+.link a:hover {
+    color: #000000;
+    background: #f7f7f7;
+    border: 1px solid #4ab3c6;
+}
+
+.link_login a:hover {
+    color: #000000;
+    background: #f7f7f7;
+    border: 1px solid #4ab3c6;
+}
+
+

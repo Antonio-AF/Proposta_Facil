@@ -1,0 +1,74 @@
+{% load static %}
+
+<html lang="PT-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <title>Cadastro</title>
+
+</head>
+
+<body style="background-image: linear-gradient(to right, #283142 50%, #E39A42 50%);">
+
+  <div class="container">
+
+
+    <div class="content" id="main">
+      <!--FORMULÁRIO DE LOGIN-->
+
+      <div id="form-signin w-100 m-auto">
+
+        {% block content %}
+
+        <form name="form-users" id="formUsers" method="POST" action="/store/">
+
+          {% if msg %}
+
+          <div class="alert {{ class }}">{{ msg }}</div>
+
+          {% endif %}
+
+          {% csrf_token %}
+
+          <img src="{% static 'img/Logo1.png' %}" alt="" class="mb-4" width="331" height="95">
+
+          <label for="user">Nome de Usuário</label>
+          <input type="username" class="form-control" name="username" id="user">
+
+          <label for="Password">Senha</label>
+          <input type="password" class="form-control" name="password" id="password">
+
+          <label for="Password-conf">Repita a Senha</label>
+          <input type="password" class="form-control" name="password-conf" id="password-conf">
+
+
+          <div class="button mb-3">
+            <button class="w-100 btn btn-lg btn-primary" type="submit" value="Cadastrar"
+              style="margin-top: 30px;">Cadastrar</button>
+          </div>
+
+
+          <div class="checkbox mb-3">
+            <p>Já tem cadastro:</p>
+            <button class="w-100 btn btn-lg btn-success"><a href="{% url 'painel' %}"
+                style="text-decoration: none; color: #ffffff">Logar</a></button>
+          </div>
+
+        </form>
+        {% endblock %}
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

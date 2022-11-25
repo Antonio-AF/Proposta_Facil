@@ -1,0 +1,135 @@
+/* CSS reset */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+label{
+    color: #283142;
+    font-weight: 500;
+    font-family: sans-serif;
+
+}
+
+
+/* Style the header with a grey background and some padding */
+
+.container{
+    display: inline-flex;
+    flex-direction: row;
+    height: auto;
+    background-color: #E39A42;
+    box-shadow: 2px 2px 2px 1px rgba(35, 27, 27, 0.395);
+    justify-content: space-between;    
+    max-width: 7000px!important;
+    
+}
+
+.container_menu{
+    display: inline-flex;
+    flex-direction: row;
+    height: auto;      
+}
+
+
+.container_menu > div {   
+    margin: 20px;
+    padding: 5px;
+    font-size: 25px;    
+}
+
+.menu{
+    align-content: center;
+}
+
+.menu > a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    
+}
+
+/* Customer registration form style sheet */
+
+.container_cadastro{
+    background-color: #c8c8c8;
+    border: solid 2px #898989;
+    margin: 0px 60px 0px 60px;
+    padding: 24px;
+}
+
+.container_label_cadastro{
+    background-color: #000000;
+    color: #E39A42;
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+    
+}
+
+table > .servico{
+    height: 35px;
+}
+
+table > .qto{
+    height: 35px;
+}
+
+table > .valor_un{
+    height: 35px;
+}
+
+
+.cliente{
+    width: 380px;    
+    border-radius: 2px;
+}
+
+.fone{
+    width: 230px;
+    border-radius: 2px;
+    
+}
+
+.endereco{
+    width: 380px;
+    border-radius: 2px;
+
+}
+
+.uf{
+    width: 60px;
+    border-radius: 2px;
+    
+}
+
+
+.container_label_servico{
+    background-color: #000000;
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.container_servico{
+    background-color: #c8c8c8;
+    border: solid 2px #898989;
+    margin: 0px 60px 0px 60px;
+    padding: 14px;
+}
+
+/* Estilizando a tag textarea */
+
+.observacao{
+    size: none;
+    width: 100%;
+    height: 100px;
+    
+}

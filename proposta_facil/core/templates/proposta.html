@@ -1,0 +1,218 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style_cadastro.css' %}">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <title>Proposta Facil</title>
+
+    <title>Proposta</title>
+</head>
+
+<body style="background-image: linear-gradient(to right, #283142 50%, #E39A42 50%);">
+    {% block content %}
+    {% if request.user.is_authenticated %}
+
+    <!-- Menu superior da página -->
+    <div class="container">
+
+        <div class="logo">
+            <a href="{% url 'index' %}" class="logo"><img src="{% static 'img/Logo1.png' %}" width="250" class="p-2"
+                    alt=""></a>
+        </div>
+
+        <div class="container_menu">
+            <div class="menu">
+                <a class="p-2" href="{% url 'index' %}">Home</a>
+            </div>
+            <div class="menu">
+                <a class="p-2" href="{% url 'dashboard'%}">Dashboard</a>
+            </div>
+            <div class="menu">
+                <a class="p-2" href="#/">Sair</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- formulário de cadastro de cliente -->
+
+    <div class="container_label_cadastro">
+        <label for="" style="color:#FFFFFF;">Cadastro</label>
+    </div>
+    <div class="container_cadastro">
+        <form>
+            <div class="row">
+                <div class="col">
+                    <label for="">Nome</label><br>
+                    <input type="text" class="cliente" name="nome">
+                </div>
+                <div class="col">
+                    <label for="">Sobrenome</label><br>
+                    <input type="password" class="cliente" name="sobrenome">
+                </div>
+                <div class="col">
+                    <label for="">E-mail</label><br>
+                    <input type="password" class="fone" name="email">
+                </div>
+                <div class="col">
+                    <label for="">Telefone-1</label><br>
+                    <input type="password" class="fone" name="telefone1">
+                </div>
+                <div class="col">
+                    <label for="">Telefone-2</label><br>
+                    <input type="password" class="fone" name="telefone2">
+                </div>
+                <div class="col">
+                    <label for="">Rua</label><br>
+                    <input type="text" class="endereco" name="rua">
+                </div>
+                <div class="col">
+                    <label for="">Bairro</label><br>
+                    <input type="password" class="endereco" name="bairro">
+                </div>
+
+
+            </div>
+            <div class="row mt-2">                
+                <div class="col-4">
+                    <label for="">Cidade</label><br>
+                    <input type="password" class="endereco" name="pswd">
+                </div>
+                <div class="col-2">
+                    <label for="">UF</label><br>
+                    <input type="password" class="uf" name="pswd">
+                </div>
+                <div class="col-6">
+                    <!-- <label for="">UF</label><br>
+                    <input type="password" class="uf" name="pswd"> -->
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-12">
+                    <label for="">Observação</label><br>
+                    <textarea name="" class="observacao"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Formulário de cadastro e calculo de serviço. -->
+
+    <div class="container_label_servico">
+        <label for="" style="color:#FFFFFF;">Serviços</label>
+    </div>
+
+    <div class="container_servico">
+        <form class="border border-white border-1 p-1">
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <th scope="col">Serviço</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Valor Un.</th>
+                        <th scope="col">Desconto</th>
+                        <th scope="col">Subtotal</th>
+                        <th scope="col">Del.</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>
+                            <input type="text" class="servico" name="email">
+                        </th>
+                        <th>
+                            <input type="text" class="qto" name="email">
+                        </th>
+                        <th>
+                            <input type="text" class="valor_un" name="email">
+                        </th>
+                        <th>
+                            <input type="text" class="valor_un" name="email">
+                        </th>
+                        <th>
+                            <input type="text" class="valor_un" name="email">
+                        </th>
+                        <th>
+                            <i class="bi bi-x-square-fill" style="font-size: 1.5rem; color: rgb(197, 1, 1);"></i>
+                        </th>
+                    </tr>
+                </tbody>
+
+
+            </table>
+        </form>
+    </div>
+
+    <!-- Formulário de cadastro e calculo de serviço. -->
+
+    <div class="container_label_servico">
+        <label for="" style="color:#FFFFFF;">Materiais</label>
+    </div>
+
+    <div class="container_servico">
+        <form class="border border-white border-1 p-1">
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <th scope="col">Material</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Valor Un.</th>
+                        <th scope="col">Desconto</th>
+                        <th scope="col">Subtotal</th>
+                        <th scope="col">Del.</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>
+                            <input type="text" class="servico" name="email">
+                        </th>
+                        <th>
+                            <input type="text" class="qto" name="email">
+                        </th>
+                        <th>
+                            <input type="text" class="valor_un" name="email">
+                        </th>
+                        <th>
+                            <input type="text" class="valor_un" name="email">
+                        </th>
+                        <th>
+                            <input type="text" class="valor_un" name="email">
+                        </th>
+                        <th>
+                            <i class="bi bi-x-square-fill" style="font-size: 1.5rem; color: rgb(197, 1, 1);"></i>
+                        </th>
+                    </tr>
+                </tbody>
+
+
+            </table>
+
+        </form>
+    </div>
+
+
+
+
+
+    {% else %}
+    Você não tem acesso a essa área!
+    {% endif %}
+    {% endblock %}
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.container_dashboard{
+    background-color: #c8c8c8b7;
+    border: solid 2px #898989;
+    margin: 0px 10px 0px 10px;
+    padding: 24px;
+}
